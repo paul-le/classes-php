@@ -1,19 +1,11 @@
 <?php 
 
-
-
-
     class User
     {
 
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
+//
+//Job 1.1
+//
 
         private $id = "";
         public $login = "";
@@ -34,14 +26,9 @@
             return(var_dump($resultatRecupInfos[0]));
         }
 
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
+//
+//Job 1.2
+//
 
         public function connect($login , $password)
         {
@@ -67,14 +54,9 @@
         }
         
      
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
+//
+//Job 1.3
+//
 
         public function disconnect()
         {
@@ -102,14 +84,9 @@
             }
         }
 
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
+//
+//Job 1.4
+//
 
         public function delete()
         {
@@ -120,14 +97,9 @@
         session_destroy();
         }
 
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
+//
+//Job 1.5
+//
 
         public function update($login,$password,$email,$firstname,$lastname)
         {
@@ -137,15 +109,9 @@
 
         }
 
-
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
+//
+//Job 1.6
+//
 
         public function isConnected()
         {
@@ -159,14 +125,9 @@
             }
         }
 
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
+//
+//Job 1.7
+//
 
         public function getAllInfos()
         {
@@ -177,14 +138,9 @@
             return(var_dump($resultatGetInfos));
         }
 
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
+//
+//Job 1.8
+//
 
         public function getLogin()
         {
@@ -195,14 +151,9 @@
             return(var_dump($resultatGetInfosConnected[0][1]));
         }
 
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
+//
+//Job 1.9
+//
 
         public function getEmail()
         {
@@ -213,65 +164,48 @@
             return(var_dump($resultatGetInfosConnectedEmail[0][3]));
         }
         
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
+//
+//Job 2.0
+//
 
-    public function getFirstname()
-    {
-        $connexion = mysqli_connect("localhost","root","","poo");
-        $requeteGetInfosConnectedFirstName = "SELECT * FROM utilisateurs WHERE login = '".$this->login."'";
-        $queryGetInfosConnectedFirstName = mysqli_query($connexion,$requeteGetInfosConnectedFirstName);
-        $resultatGetInfosConnectedFirstName = mysqli_fetch_all($queryGetInfosConnectedFirstName);
-        return(var_dump($resultatGetInfosConnectedFirstName[0][4]));
-    }
+        public function getFirstname()
+        {
+            $connexion = mysqli_connect("localhost","root","","poo");
+            $requeteGetInfosConnectedFirstName = "SELECT * FROM utilisateurs WHERE login = '".$this->login."'";
+            $queryGetInfosConnectedFirstName = mysqli_query($connexion,$requeteGetInfosConnectedFirstName);
+            $resultatGetInfosConnectedFirstName = mysqli_fetch_all($queryGetInfosConnectedFirstName);
+            return(var_dump($resultatGetInfosConnectedFirstName[0][4]));
+        }
 
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
+//
+//Job 2.1
+//
 
-    public function getLastname()
-    {
-        $connexion = mysqli_connect("localhost","root","","poo");
-        $requeteGetInfosConnectedLastname = "SELECT * FROM utilisateurs WHERE login = '".$this->login."'";
-        $queryGetInfosConnectedLastname = mysqli_query($connexion,$requeteGetInfosConnectedLastname);
-        $resultatGetInfosConnectedLastname = mysqli_fetch_all($queryGetInfosConnectedLastname);
-        return(var_dump($resultatGetInfosConnectedLastname[0][5]));
-    }
+        public function getLastname()
+        {
+            $connexion = mysqli_connect("localhost","root","","poo");
+            $requeteGetInfosConnectedLastname = "SELECT * FROM utilisateurs WHERE login = '".$this->login."'";
+            $queryGetInfosConnectedLastname = mysqli_query($connexion,$requeteGetInfosConnectedLastname);
+            $resultatGetInfosConnectedLastname = mysqli_fetch_all($queryGetInfosConnectedLastname);
+            return(var_dump($resultatGetInfosConnectedLastname[0][5]));
+        }
 
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
+//
+//Job 2.2
+//
 
-    public function refresh()
-    {
+        public function refresh()
+        {
 
-        $connexion = mysqli_connect("localhost","root","","poo");
-        $requeteRefresh = "SELECT * FROM utilisateurs";
-        $queryRefresh = mysqli_query($connexion,$queryRefresh);
-        $resultatRefresh = mysqli_fetch_all($queryRefresh);
-    
-        $login->$resultatRefresh[0]['login'];
-        $email->$resultatRefresh[0]['email'];
-        $firstname->$resultatRefresh[0]['firstname'];
-        $lastname->$resultatRefresh[0]['lastname'];
-
-    }
+            $connexion = mysqli_connect("localhost","root","","poo");
+            $requeteRefresh = "SELECT * FROM utilisateurs";
+            $queryRefresh = mysqli_query($connexion,$queryRefresh);
+            $resultatRefresh = mysqli_fetch_all($queryRefresh);
+            $login->$resultatRefresh[0]['login'];
+            $email->$resultatRefresh[0]['email'];
+            $firstname->$resultatRefresh[0]['firstname'];
+            $lastname->$resultatRefresh[0]['lastname']
+        }
 
     }
 
