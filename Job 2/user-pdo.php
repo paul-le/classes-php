@@ -6,14 +6,9 @@
     class Userpdo
     {
 
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
-/*////////////////////////////////JOB1.1*/
+//
+//Job 1.1
+//
 
         private $id = "";
         public $login = "";
@@ -30,14 +25,9 @@
             $pdo_prepare->execute();
         }
 
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
-/*////////////////////////////////JOB1.2*/
+//
+//Job 1.2
+//
 
         public function connect($login , $password)
         {
@@ -63,14 +53,9 @@
         }
         
      
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
-/*////////////////////////////////JOB1.3*/
+//
+//Job 1.3
+//
 
         public function disconnect()
         {
@@ -99,14 +84,9 @@
             }
         }
 
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
-/*////////////////////////////////JOB1.4*/
+//
+//Job 1.4
+//
 
         public function delete()
         {
@@ -118,14 +98,9 @@
         session_destroy();
         }
 
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
-/*////////////////////////////////JOB1.5*/
+//
+//Job 1.5
+//
 
         public function update($login,$password,$email,$firstname,$lastname)
         {
@@ -137,14 +112,9 @@
         }
 
 
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
-/*////////////////////////////////JOB1.6*/
+//
+//Job 1.6
+//
 
         public function isConnected()
         {
@@ -158,14 +128,9 @@
             }
         }
 
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
-/*////////////////////////////////JOB1.7*/
+//
+//Job 1.7
+//
 
         public function getAllInfos()
         {
@@ -173,18 +138,13 @@
             $queryGetInfos = "SELECT * FROM utilisateurs";
             $pdo_prepare = $pdo->prepare($queryGetInfos);
             $pdo_prepare->execute();
-            $$resultatGetInfos = $pdo_prepare->fetchAll(); 
+            $resultatGetInfos = $pdo_prepare->fetchAll(); 
             return($resultatGetInfos);
         }
 
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
-/*////////////////////////////////JOB1.8*/
+//
+//Job 1.8
+//
 
         public function getLogin()
         {
@@ -196,14 +156,9 @@
             return($resultatGetInfosConnected[0][1]);
         }
 
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
-/*////////////////////////////////JOB1.9*/
+//
+//Job 1.9
+//
 
         public function getEmail()
         {
@@ -215,70 +170,54 @@
             return($resultatGetInfosConnectedEmail[0][3]);
         }
         
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
-/*////////////////////////////////JOB1.10*/
+//
+//Job 2.0
+//
 
-    public function getFirstname()
-    {
-        $pdo = new PDO('mysql:host=localhost;dbname=poo', 'root', '');
-        $queryGetInfosConnectedFirstName = "SELECT * FROM utilisateurs WHERE login = '".$this->login."'";
-        $pdo_prepare = $pdo->prepare($queryGetInfosConnectedFirstName);
-        $pdo_prepare->execute();
-        $resultatGetInfosConnectedFirstName = $pdo_prepare->fetchAll();
-        return($resultatGetInfosConnectedFirstName[0][4]);
-    }
+        public function getFirstname()
+        {
+            $pdo = new PDO('mysql:host=localhost;dbname=poo', 'root', '');
+            $queryGetInfosConnectedFirstName = "SELECT * FROM utilisateurs WHERE login = '".$this->login."'";
+            $pdo_prepare = $pdo->prepare($queryGetInfosConnectedFirstName);
+            $pdo_prepare->execute();
+            $resultatGetInfosConnectedFirstName = $pdo_prepare->fetchAll();
+            return($resultatGetInfosConnectedFirstName[0][4]);
+        }
 
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
-/*////////////////////////////////JOB1.11*/
+//
+//Job 2.1
+//
 
-    public function getLastname()
-    {
-        $pdo = new PDO('mysql:host=localhost;dbname=poo', 'root', '');
-        $queryGetInfosConnectedLastname = "SELECT * FROM utilisateurs WHERE login = '".$this->login."'";
-        $pdo_prepare = $pdo->prepare($queryGetInfosConnectedLastname);
-        $pdo_prepare->execute();
-        $resultatGetInfosConnectedLastname = $pdo_prepare->fetchAll();
-        return($resultatGetInfosConnectedLastname[0][5]);
-    }
+        public function getLastname()
+        {
+            $pdo = new PDO('mysql:host=localhost;dbname=poo', 'root', '');
+            $queryGetInfosConnectedLastname = "SELECT * FROM utilisateurs WHERE login = '".$this->login."'";
+            $pdo_prepare = $pdo->prepare($queryGetInfosConnectedLastname);
+            $pdo_prepare->execute();
+            $resultatGetInfosConnectedLastname = $pdo_prepare->fetchAll();
+            return($resultatGetInfosConnectedLastname[0][5]);
+        }
 
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
-/*////////////////////////////////JOB1.12*/
+//
+//Job 2.2
+//
 
-    public function refresh()
-    {
+        public function refresh()
+        {
 
-        $pdo = new PDO('mysql:host=localhost;dbname=poo', 'root', '');
-        $queryRefresh = "SELECT * FROM utilisateurs";
-        $pdo_prepare = $pdo->prepare($queryRefresh);
-        $pdo_prepare->execute();
-        $resultatRefresh = $pdo_prepare->fetchAll();
-    
-        $login->$resultatRefresh[0]['login'];
-        $email->$resultatRefresh[0]['email'];
-        $firstname->$resultatRefresh[0]['firstname'];
-        $lastname->$resultatRefresh[0]['lastname'];
+            $pdo = new PDO('mysql:host=localhost;dbname=poo', 'root', '');
+            $queryRefresh = "SELECT * FROM utilisateurs";
+            $pdo_prepare = $pdo->prepare($queryRefresh);
+            $pdo_prepare->execute();
+            $resultatRefresh = $pdo_prepare->fetchAll();
+            $login->$resultatRefresh[0]['login'];
+            $email->$resultatRefresh[0]['email'];
+            $firstname->$resultatRefresh[0]['firstname'];
+            $lastname->$resultatRefresh[0]['lastname'];
 
-    }
+        }
 
-    }
+}
 
     $paul = new Userpdo();
     // $paul-> register("ToastPDO","TOASTPDO","emailPDO@gmail.com","PaulPDO","LE");
