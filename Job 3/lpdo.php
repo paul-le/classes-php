@@ -108,16 +108,18 @@
 
         public function getTables()
         {
-            // return $this->execute("Select TABLE_NAME FROM information_schema.tables WHERE table_type = 'base table' AND table_schema='poo'");
+            return $this->execute("Select TABLE_NAME FROM information_schema.tables WHERE table_type = 'base table' AND table_schema='poo'");
         }
 
 //
 //Job 1.9
 //
 
-        public function getFields ($table){
+        public function getFields ($table)
+        {
+
             return $this->execute("Select COLUMN_NAME FROM information_schema.columns WHERE table_name='$table' AND table_schema='POO' ");
-       }
+        }
 
     }
     
